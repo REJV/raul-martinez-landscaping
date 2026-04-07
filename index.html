@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raul Martinez LLC | Landscaping Services in Port Chester</title>
+    <style>
+        :root {
+            --primary-green: #00d315; /* Matches the vibrant green in the logo */
+            --dark-bg: #111111;
+            --light-text: #f4f4f4;
+            --section-bg: #1a1a1a;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-green);
+        }
+
+        .logo-container img {
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-green);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 211, 21, 0.2);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-green);
+            box-shadow: 0 6px 12px rgba(0, 211, 21, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('unnamed.webp') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        /* --- Services Gallery --- */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background-color: var(--section-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-green);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-item h3 {
+            padding: 20px 10px 10px;
+            font-size: 1.4rem;
+        }
+
+        .gallery-item p {
+            padding: 0 20px 20px;
+            color: #ccc;
+        }
+
+        /* --- Reviews Section --- */
+        .reviews {
+            background-color: var(--section-bg);
+            padding: 80px 5%;
+            text-align: center;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .review-card {
+            background-color: #000;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        /* --- Contact Section & Footer --- */
+        .contact-info {
+            padding: 80px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+        }
+
+        .info-box {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--section-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-box h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid var(--primary-green);
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="2020-09-05 (2).webp" alt="Raul Martinez LLC Landscaping Services Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="tel:9144006044" class="btn">Call (914) 400-6044</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Landscaping Services</h1>
+            <p>Serving Port Chester, Greenwich, and nearby areas with year-round excellence and attention to detail.</p>
+            <a href="#contact" class="btn" style="margin-top: 20px; padding: 15px 40px; font-size: 1.2rem;">Get a Free Estimate</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">Our Work</h2>
+        <div class="gallery-grid">
+            
+            <div class="gallery-item">
+                <img src="2020-09-05.webp" alt="Striped Lawn Maintenance">
+                <h3>Lawn Maintenance</h3>
+                <p>Precision mowing, edging, and turf care for a flawless, green property.</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="2020-09-05 (1).webp" alt="Hydrangea Plantings">
+                <h3>Planting & Bed Care</h3>
+                <p>Beautiful shrubbery, flower installations, and mulch maintenance.</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="unnamed (2).webp" alt="Gravel Patio Preparation">
+                <h3>Hardscaping & Pathways</h3>
+                <p>Expert ground preparation, gravel beds, and custom walkway installations.</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="unnamed (1).webp" alt="Fall Leaf Cleanup">
+                <h3>Seasonal Cleanups</h3>
+                <p>Heavy-duty leaf removal, vacuuming, and complete yard restorations.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2 class="section-title">5-Star Customer Satisfaction</h2>
+        <div class="stars">★★★★★</div>
+        <div class="review-grid">
+            <div class="review-card">
+                "They offer excellent service at a fair price."
+            </div>
+            <div class="review-card">
+                "They really care about the quality of their work and it shows in the results."
+            </div>
+            <div class="review-card">
+                "Excellent year round service."
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-info">
+        
+        <div class="info-box">
+            <h3>Contact Us</h3>
+            <p><strong>Phone:</strong> <br>(914) 400-6044</p>
+            <br>
+            <p><strong>Address:</strong> <br>532 Locust Ave<br>Port Chester, NY 10573</p>
+            <br>
+            <p><strong>Areas Served:</strong> <br>Port Chester, Greenwich, and nearby areas</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Business Hours</h3>
+            <ul>
+                <li><strong>Monday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong>Tuesday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong>Wednesday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong>Thursday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong>Friday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong>Saturday:</strong> 7:00 AM – 6:00 PM</li>
+                <li><strong style="color: #ff4c4c;">Sunday:</strong> Closed</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Raul Martinez LLC Landscaping Services. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
